@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="lidar_xv11_bringup" pkg="lidar-xv11" type="xv11-bringup.py" cwd="node" output="screen"/>
+
+    <node name="lidar_xv11_driver" pkg="xv_11_laser_driver" type="neato_laser_publisher" respawn="true" output="screen">
+        <param name="port" value="/dev/ttyTHS2"/>
+    </node>
+
+</launch>

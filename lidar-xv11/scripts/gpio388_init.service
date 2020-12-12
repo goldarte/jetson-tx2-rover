@@ -1,0 +1,9 @@
+[Unit]
+Description=Set output mode to gpio 388
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "echo 388 > /sys/class/gpio/export && echo out > /sys/class/gpio/gpio388/direction"
+
+[Install]
+WantedBy=multi-user.target
