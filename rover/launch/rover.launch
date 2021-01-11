@@ -1,0 +1,9 @@
+<launch>
+
+    <!-- lidar bringup -->
+    <include file="$(find lidar-xv11)/launch/lidar-xv11.launch"/>
+
+    <!-- mavros -->
+    <include file="$(find rover)/launch/apm.launch"/>"
+
+</launch>
